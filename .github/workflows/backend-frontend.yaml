@@ -30,6 +30,10 @@ jobs:
       - name: Build Docker image
         run: docker build -t fastapi-homepage:latest .
 
+      - name: Set up Trivy
+        uses: aquasecurity/trivy-action@0.13.0
+
+
       - name: Scan Docker image with Trivy
         uses: aquasecurity/trivy-action@v0.13.0
         with:
