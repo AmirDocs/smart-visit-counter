@@ -1,9 +1,12 @@
 import time
 
+
 timer_state = {"start_time": None}
+
 
 def start_timer():
     timer_state["start_time"] = time.time()
+
 
 def get_timer_status():
     if timer_state["start_time"] is None:
