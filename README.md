@@ -1,10 +1,10 @@
 # DevOps Hub - FastAPI Homepage
 
-A simple personalised FastAPI-powered homepage designed to showcase and learn essential DevOps tools and track visitor interactions with a sleek, modern UI.
+A simple, AI-enhanced FastAPI-powered homepage designed to showcase and learn essential DevOps tools while tracking visitor interactions with a sleek, modern UI.
 
 ## Features
 
-- **Personalised greeting:** Dynamically generated based on visitor IP.
+- **AI-powered greeting:** Personalised greeting dynamically generated based on visitor IP using intelligent logic.
 - **Visitor tracking:** Displays visitor's IP address and counts the number of visits.
 - **DevOps tools highlights:** Randomly displays three popular DevOps tools with official documentation links.
 - **GitHub repository listing:** Fetches and displays submodules and directories from my linked GitHub repository.
@@ -21,18 +21,19 @@ A simple personalised FastAPI-powered homepage designed to showcase and learn es
 ## Usage
 
 1. **Clone the repository:**
-
    ```
-   git clone <your-repo-url>
+   git clone git@github.com:AmirDocs/smart-visit-counter.git
    ```
 
-2. **Build the Docker Image:**
+## Set Up the Image
+
+1. **Build the Docker Image:**
 
    ```
    docker build -t ai-visit-timer .
    ```
 
-3. **Run the Dockerfile**
+2. **Run the Dockerfile**
 
    ```
    docker run -p 8000:8000 ai-visit-timer
