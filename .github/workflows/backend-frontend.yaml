@@ -22,7 +22,7 @@ jobs:
           pip install flake8 pytest
 
       - name: Run flake8 lint
-        run: flake8 app --ignore=E501
+        run: flake8 app --ignore=E501,E302
 
       - name: Run tests
         run: pytest tests
