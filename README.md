@@ -26,7 +26,7 @@ A simple, AI-enhanced FastAPI-powered homepage designed to showcase and learn es
    git clone git@github.com:AmirDocs/smart-visit-counter.git
    ```
 
-## Set Up the Image
+## Setup the Image
 
 1. **Build the Docker Image:**
 
