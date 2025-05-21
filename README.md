@@ -21,6 +21,7 @@ A simple, AI-enhanced FastAPI-powered homepage designed to showcase and learn es
 ## Usage
 
 1. **Clone the repository:**
+
    ```
    git clone git@github.com:AmirDocs/smart-visit-counter.git
    ```
