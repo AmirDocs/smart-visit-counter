@@ -28,12 +28,12 @@ A simple personalised FastAPI-powered homepage designed to showcase and learn es
 
 2. **Build the Docker Image:**
 
-```
-docker build -t ai-visit-timer .
-```
+   ```
+   docker build -t ai-visit-timer .
+   ```
 
 3. **Run the Dockerfile**
 
-```
-docker run -p 8000:8000 ai-visit-timer
-```
+   ```
+   docker run -p 8000:8000 ai-visit-timer
+   ```
