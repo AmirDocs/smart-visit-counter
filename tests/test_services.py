@@ -1,15 +1,18 @@
-# tests functions
+from app.services import timer
+import time
 
-from app.services.timer import calculate_duration  
-from app.services.visit_counter import increment_counter 
+def test_start_timer_sets_time():
+    timer.start_timer()
+    assert timer.timer_state["start_time"] is not None
 
-def test_calculate_duration():
-    start_time = "2023-01-01T10:00:00"
-    end_time = "2023-01-01T11:00:00"
-    duration = calculate_duration(start_time, end_time)
-    assert duration == 3600  # 1 hour in seconds
+def test_get_timer_status_running():
+    timer.start_timer()
+    time.sleep(0.1)  # short wait to simulate time passing
+    status = timer.get_timer_status()
+    assert status["status"] == "running"
+    assert status["elapsed_seconds"] >= 0.1
 
-def test_increment_counter():
-    counter = 0
-    new_counter = increment_counter(counter)
-    assert new_counter == 1
+def test_get_timer_status_not_started():
+    timer.timer_state["start_time"] = None  # manually reset
+    status = timer.get_timer_status()
+    assert status == {"status": "Timer not started"}
