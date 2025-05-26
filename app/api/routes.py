@@ -291,3 +291,7 @@ async def home(request: Request):
     """
 
     return HTMLResponse(content=html_content)
+
+@router.get("/health")
+async def health_check():
+    return {"status": "ok"}

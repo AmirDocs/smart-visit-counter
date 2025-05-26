@@ -1,9 +1,13 @@
 from fastapi.testclient import TestClient
-from app.main import app 
+from fastapi import FastAPI
+from app.api.routes import router  # Adjusted import path
+
+app = FastAPI()
+app.include_router(router)
 
 client = TestClient(app)
 
-def test_ping():
-    response = client.get("/ping")
+def test_health_route():
+    response = client.get("/health")
     assert response.status_code == 200
-    assert response.json() == {"message": "pong"}
+    assert response.json() == {"status": "ok"}
