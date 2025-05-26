@@ -35,9 +35,10 @@ jobs:
 
       - name: Set up Trivy
         uses: aquasecurity/trivy-action@0.28.0
-
-      - name: Run Trivy scan on image
-        run: trivy image --severity HIGH,CRITICAL --exit-code 1 fastapi-homepage:latest
+        with:
+          image-ref: fastapi-homepage:latest
+          severity: HIGH,CRITICAL
+          exit-code: 1
 
   frontend:
     runs-on: ubuntu-latest
