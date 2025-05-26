@@ -31,7 +31,7 @@ jobs:
         run: docker build -t fastapi-homepage:latest .
 
       - name: Set up Trivy
-        uses: aquasecurity/trivy-action@v0.11.0
+        uses: aquasecurity/trivy-action@v0.30.0
 
       - name: Run Trivy scan on image
         run: trivy image --severity HIGH,CRITICAL --exit-code 1 fastapi-homepage:latest
