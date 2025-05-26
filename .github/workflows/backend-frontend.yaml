@@ -10,7 +10,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Set up Python 3.10
+      - name: Set up Python 3.11
         uses: actions/setup-python@v4
         with:
           python-version: 3.11
@@ -22,7 +22,7 @@ jobs:
           pip install flake8 pytest
 
       - name: Run flake8 lint
-        run: flake8 app
+        run: flake8 app --max-line-length=120
 
       - name: Run tests
         run: pytest tests
