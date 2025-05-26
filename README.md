@@ -2,6 +2,8 @@
 
 A simple, AI-enhanced FastAPI-powered homepage designed to showcase and learn essential DevOps tools while tracking visitor interactions with a sleek, modern UI.
 
+![FastAPI Homepage](<screenshots/Screenshot 2025-05-21 221945.png>)
+
 ## Features
 
 - **AI-powered greeting:** Personalised greeting dynamically generated based on visitor IP using intelligent logic.
