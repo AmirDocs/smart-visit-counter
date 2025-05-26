@@ -26,12 +26,12 @@ jobs:
 
       - name: Run tests
         run: pytest tests
-      
-      - name: List local docker images
-        run: docker images
 
       - name: Build Docker image
         run: docker build -t fastapi-homepage:latest .
+
+      - name: List local docker images
+        run: docker images
 
       - name: Set up Trivy
         uses: aquasecurity/trivy-action@0.28.0
