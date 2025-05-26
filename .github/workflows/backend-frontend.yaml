@@ -39,6 +39,7 @@ jobs:
           image-ref: fastapi-homepage:latest
           severity: HIGH,CRITICAL
           exit-code: 1
+          ignore-files: .trivyignore
 
   frontend:
     runs-on: ubuntu-latest
